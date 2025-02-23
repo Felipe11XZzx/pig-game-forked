@@ -169,3 +169,59 @@ main {
 .hidden {
   display: none;
 }
+
+/* Estilos para el mensaje de victoria */
+.victory-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.victory-message {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem 4rem;
+  border-radius: 1rem;
+  text-align: center;
+  z-index: 101;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.victory-message h1 {
+  font-size: 2.5rem;
+  color: #c7365f;
+  margin-bottom: 1rem;
+}
+
+.victory-message span {
+  font-size: 1.8rem;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -70%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
